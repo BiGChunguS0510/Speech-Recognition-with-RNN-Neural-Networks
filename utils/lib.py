@@ -409,7 +409,7 @@ class AudioClass(object):
                  data=None, sample_rate=None, filename=None,
                  n_mfcc=12):
         if filename:
-            self.data, self.sample_rate = read_audio(filename, dst_sample_rate=None)
+            self.data, self.sample_rate = read_audio(filename, dst_sample_rate=sample_rate)
         elif (len(data) and sample_rate):
             self.data, self.sample_rate = data, sample_rate
         else:
